@@ -1,0 +1,178 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbe4d8; /* Light background to contrast with dark theme */
+    color: #523b5b; /* Dusty lavender text color */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #190019; /* Dark purple header background */
+    color: #fff; /* White text */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid #2b124c; /* Deep violet border */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #ff6fb0; /* Soft pink hover effect for links */
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.input-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: #fff; /* White background for input section */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #2b124c; /* Deep violet for titles */
+}
+
+.input-section input {
+    padding: 0.7rem;
+    width: 70%;
+    max-width: 400px;
+    margin-right: 0.5rem;
+    border: 1px solid #523b5b; /* Dusty lavender border */
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.input-section button {
+    padding: 0.7rem 1.5rem;
+    background-color: #2b124c; /* Deep violet button background */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: #190019; /* Dark purple button hover */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+section {
+    padding: 2rem 0;
+    scroll-margin-top: 100px;
+}
+
+footer {
+    background-color: #190019; /* Dark purple footer background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #2b124c; /* Deep violet top border */
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff6fb0; /* Soft pink links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Lightbox Styles */
+#lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+#lightbox.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#close-lightbox {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#close-lightbox:hover {
+    color: #ff6fb0; /* Soft pink hover effect for close button */
+}
